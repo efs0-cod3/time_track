@@ -7,6 +7,7 @@ main {
     display: grid;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .user {
@@ -25,7 +26,8 @@ main {
     border-radius: 15px;
     padding: 30PX;
 }
-.user__name{
+
+.user__name {
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -43,16 +45,69 @@ img {
     margin-right: 20PX;
 }
 
-.user__stats-division {
+.user__timeframe-division {
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
 }
 
+/* stats section */
+
 .cont {
     background: hsl(235, 46%, 20%);
     margin-bottom: 10px;
     width: 328px;
-    padding: 20px;
+    padding: 32px 28px;
     border-radius: 15px;
+}
+
+.stats__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.stats__title-name{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.daily {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.daily--active{
+    display: block;
+}
+
+.weekly {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekly--active{
+    display: block;
+}
+
+.monthly {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.monthly--active{
+    display: block;
+}
+
+.resent {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.previous{
+    font-weight: 300;
+    font-size: .8rem;
 }
