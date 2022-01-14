@@ -7,9 +7,14 @@ main {
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
+.wrapper {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* profile */
 .user {
     background: hsl(235, 46%, 20%);
     margin-bottom: 20px;
@@ -33,6 +38,7 @@ main {
 }
 
 .user__name-report {
+    color: hsl(235, 45%, 61%);
     display: block;
     font-size: 1.1rem;
     margin-bottom: 10px;
@@ -45,20 +51,63 @@ img {
     margin-right: 20PX;
 }
 
+/* buttons */
 .user__timeframe-division {
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
 }
 
+.btn {
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: hsl(236, 100%, 87%);
+}
+
+.btn:hover {
+    color: white;
+}
+
+.daily-btn--active{
+color: white;
+}
+.weekly-btn--active{
+    color: white;
+}
+.monthly-btn--active{
+    color: white;
+}
+
+
+
 /* stats section */
 
 .cont {
-    background: hsl(235, 46%, 20%);
+    /* Dark blue */
     margin-bottom: 10px;
     width: 328px;
-    padding: 32px 28px;
+    height: 160px;
+    padding: 0;
     border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cont__info {
+    position: relative;
+    bottom: -38px;
+    height: 122px;
+    background: hsl(235, 46%, 20%);
+    /* Dark blue */
+    padding: 25px 28px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.cont__info:hover {
+    background: hsl(235, 45%, 61%);
+    /*Desaturated blue */
 }
 
 .stats__title {
@@ -67,18 +116,19 @@ img {
     margin-bottom: 18px;
 }
 
-.stats__title-name{
+.stats__title-name {
     font-size: 1.3rem;
     font-weight: 500;
 }
 
+/* timeframes */
 .daily {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.daily--active{
+.daily--active {
     display: block;
 }
 
@@ -86,9 +136,10 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: none;
 }
 
-.weekly--active{
+.weekly--active {
     display: block;
 }
 
@@ -96,18 +147,163 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: none;
 }
 
-.monthly--active{
+.monthly--active {
     display: block;
 }
 
-.resent {
+.recent {
     font-size: 2rem;
     font-weight: 300;
+    
 }
 
-.previous{
+.previous {
     font-weight: 300;
     font-size: .8rem;
+    color: hsl(236, 100%, 87%);
+}
+
+
+/* individual container */
+.Work {
+    background: hsl(15, 100%, 70%) url(../images/icon-work.svg) no-repeat 222px -10px;
+
+}
+
+.Play {
+    background: hsl(195, 74%, 62%) url(../images/icon-play.svg) no-repeat 222px -5px;
+
+}
+
+.Study {
+    background: hsl(348, 100%, 68%) url(../images/icon-study.svg) no-repeat 223px -5px;
+
+}
+
+.Exercise {
+    background: hsl(145, 58%, 55%) url(../images/icon-exercise.svg) no-repeat 220px -2px;
+
+}
+
+.Social {
+    background: hsl(264, 64%, 52%) url(../images/icon-social.svg) no-repeat 230px -18px;
+
+}
+
+.Self-care {
+    background: hsl(43, 84%, 65%) url(../images/icon-self-care.svg) no-repeat 233px -16px;
+
+}
+
+@media screen and (min-width: 500px) {
+    .wrapper {
+        width: 1110px;
+        height: 506px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-column-gap: 20px;
+        grid-template-areas:
+            "user stats"
+        ;
+    }
+
+
+    .user {
+        height: 506px;
+        width: 255px;
+        margin: 0;
+        grid-area: user;
+    }
+
+    .user__profile {
+        height: 330px;
+        display: block;
+    }
+
+    .user__profile img {
+        margin-bottom: 40px;
+    }
+
+    .user__name {
+        font-size: 3rem;
+    }
+
+    .user__timeframe-division {
+       height: 150px;
+       display: flex;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .stats {
+        display: grid;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        grid-template-areas:
+            "work play study"
+            "exercise social selfcare"
+        ;
+    }
+
+    .cont {
+        width: 255px;
+        height: 245px;
+        margin: 0;
+    }
+
+    .cont__info{
+        height: 204px;
+        bottom: -40px;
+    }
+    .Work {
+        grid-area: work;
+        background-position: 148px -10px;
+
+    }
+
+    .Play {
+        grid-area: play;
+        background-position: 148px -10px;
+
+    }
+
+    .Study {
+        grid-area: study;
+        background-position: 148px -10px;
+
+    }
+
+    .Exercise {
+        grid-area: exercise;
+        background-position: 147px -10px;
+
+    }
+
+    .Social {
+        grid-area: social;
+        background-position: 156px -10px;
+
+    }
+
+    .Self-care {
+        grid-area: selfcare;
+        background-position: 160px -10px;
+    }
+
+   .daily {
+        display:block;
+    }
+    
+    .recent {
+        font-size: 3rem;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+
 }
