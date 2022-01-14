@@ -159,8 +159,8 @@ myData.forEach((item) => {
   stats.append(cards)
 })
 
-dBtn.addEventListener('click', () => {
-  dBtn.classList.add('daily-btn--active')
+// dBtn.addEventListener('click', () => {
+//   dBtn.classList.add('daily-btn--active')
 
-  if(dBtn.classList == 'daily-b')
-})
+//   if(dBtn.classList == 'daily-b')
+// })
