@@ -69,17 +69,9 @@ img {
     color: white;
 }
 
-.daily-btn--active{
-color: white;
-}
-.weekly-btn--active{
+.btn--active {
     color: white;
 }
-.monthly-btn--active{
-    color: white;
-}
-
-
 
 /* stats section */
 
@@ -122,42 +114,43 @@ color: white;
 }
 
 /* timeframes */
+
 .daily {
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
 }
 
 .daily--active {
-    display: block;
+    display: flex;
 }
 
 .weekly {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     display: none;
 }
 
 .weekly--active {
-    display: block;
+    display: flex;
+
 }
 
 .monthly {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     display: none;
 }
 
 .monthly--active {
-    display: block;
+    display: flex;
+
 }
 
 .recent {
     font-size: 2rem;
     font-weight: 300;
-    
+
 }
 
 .previous {
@@ -233,9 +226,9 @@ color: white;
     }
 
     .user__timeframe-division {
-       height: 150px;
-       display: flex;
-       flex-direction: column;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
     }
 
@@ -256,10 +249,11 @@ color: white;
         margin: 0;
     }
 
-    .cont__info{
+    .cont__info {
         height: 204px;
         bottom: -40px;
     }
+
     .Work {
         grid-area: work;
         background-position: 148px -10px;
@@ -295,10 +289,18 @@ color: white;
         background-position: 160px -10px;
     }
 
-   .daily {
-        display:block;
+
+    .daily--active {
+        display: block;
     }
     
+    .weekly--active {
+        display: block;
+    }
+        
+    .monthly--active {
+        display: block;
+    }
     .recent {
         font-size: 3rem;
         padding-top: 10px;
