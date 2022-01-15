@@ -135,22 +135,22 @@ myData.forEach((item) => {
 
        <div class="weekly">
          <p class="recent">
-         32hrs
+         ${item.timeframes.weekly.current}hrs
           <!-- weekly -->
         </p>
         <p class="previous">
-           Last Week - 36hrs
+           Last Week - ${item.timeframes.weekly.previous}hrs
            <!-- weekly -->
          </p>
 
        </div>
        <div class="monthly">
          <p class="recent">
-           103hrs
+         ${item.timeframes.monthly.current}hrs
            <!-- monthly -->
          </p>
          <p class="previous">
-          Last Month - 128hrs
+          Last Month - ${item.timeframes.monthly.previous}hrs
           <!-- monthly -->
          </p>
       </div>
