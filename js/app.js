@@ -1,6 +1,9 @@
-let dBtn = document.getElementsByClassName('daily-btn')[0]
-let wBtn = document.getElementsByClassName('weekly-btn')[0]
-let mBtn = document.getElementsByClassName('monthly-btn')[0]
+let dBtn = document.getElementsByClassName('daily-btn')[0];
+let wBtn = document.getElementsByClassName('weekly-btn')[0];
+let mBtn = document.getElementsByClassName('monthly-btn')[0];
+let daily = document.getElementsByClassName('daily');
+let weekly = document.getElementsByClassName('weekly');
+let monthly = document.getElementsByClassName('monthly');
 
 let data = [{
     "title": "Work",
@@ -119,7 +122,7 @@ myData.forEach((item) => {
        <p>...</p>
      </div>
     <div class="stats__hours-section">
-      <div class="daily">
+      <div class="daily daily--active">
          <p class="recent">
          ${item.timeframes.daily.current}hrs
            <!-- daily -->
@@ -155,12 +158,90 @@ myData.forEach((item) => {
   </div>
  </div>  
   `
-
   stats.append(cards)
 })
 
-// dBtn.addEventListener('click', () => {
-//   dBtn.classList.add('daily-btn--active')
+// set active to daily button and section
+let showDaily = () => {
+  // button
+  dBtn.classList.add('btn--active')
+  // sections
+  for(let i = 0;i < daily.length; i++){
+    daily[i].classList.add('daily--active');
+  }
+}
+// when daily btn is active this remove active from the other buttons and sections
+let remove_wm = () => {
+  wBtn.classList.remove('btn--active');
+  mBtn.classList.remove('btn--active');
+  
+  for(let i = 0;i < weekly.length; i++){
+    weekly[i].classList.remove('weekly--active');
+  }
+  for(let i = 0;i < monthly.length; i++){
+    monthly[i].classList.remove('monthly--active');
+  }
+}
+// set active to weekly button and section
+let showWeekly = () => {
+  // button
+  wBtn.classList.add('btn--active');
+  // sections
+  for(let i = 0;i < weekly.length; i++){
+    weekly[i].classList.add('weekly--active');
+  }
+}
 
-//   if(dBtn.classList == 'daily-b')
-// })
+// when weekly btn is active this remove active from the other buttons and sections
+let remove_dm = () => {
+  dBtn.classList.remove('btn--active');
+  mBtn.classList.remove('btn--active');
+
+  for(let i = 0;i < daily.length; i++){
+    daily[i].classList.remove('daily--active');
+  }
+  for(let i = 0;i < monthly.length; i++){
+    monthly[i].classList.remove('monthly--active');
+  }
+}
+
+// set active to monthly button and section
+let showMonthly = () => {
+  // button
+  mBtn.classList.add('btn--active');
+  // sections
+  for(let i = 0;i < monthly.length; i++){
+    monthly[i].classList.add('monthly--active');
+  }
+}
+// when monthly btn is active this remove active from the other buttons and sections
+let remove_dw = () => {
+  // btn
+  dBtn.classList.remove('btn--active');
+  wBtn.classList.remove('btn--active');
+
+  // sections
+  for(let i = 0;i < daily.length; i++){
+    daily[i].classList.remove('daily--active');
+  }
+  for(let i = 0;i < weekly.length; i++){
+    weekly[i].classList.remove('weekly--active');
+  }
+}
+
+dBtn.addEventListener('click', () => {
+  showDaily()
+  remove_wm()
+
+})
+wBtn.addEventListener('click', () => {
+  showWeekly()
+  remove_dm()
+
+})
+mBtn.addEventListener('click', () => {
+  showMonthly()
+  remove_dw()
+
+
+})
