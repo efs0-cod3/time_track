@@ -63,9 +63,7 @@ function getHours() {
  </div>
           `
           
-        });
-    
-    
+        });  
         stats.innerHTML = cards
       })
 }
