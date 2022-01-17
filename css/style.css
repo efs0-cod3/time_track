@@ -10,6 +10,7 @@ main {
 }
 
 .wrapper {
+    width: 80vw;
     margin-top: 100px;
     margin-bottom: 100px;
 }
@@ -18,7 +19,6 @@ main {
 .user {
     background: hsl(235, 46%, 20%);
     margin-bottom: 20px;
-    width: 328px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -76,10 +76,7 @@ img {
 /* stats section */
 
 .cont {
-    /* Dark blue */
     margin-bottom: 10px;
-    width: 328px;
-    height: 160px;
     padding: 0;
     border-radius: 15px;
     cursor: pointer;
@@ -88,10 +85,8 @@ img {
 
 .cont__info {
     position: relative;
-    bottom: -38px;
-    height: 122px;
+    margin-top: 2rem;
     background: hsl(235, 46%, 20%);
-    /* Dark blue */
     padding: 25px 28px;
     border-radius: 15px;
     cursor: pointer;
@@ -162,39 +157,49 @@ img {
 
 /* individual container */
 .Work {
-    background: hsl(15, 100%, 70%) url(../images/icon-work.svg) no-repeat 222px -10px;
+    background: hsl(15, 100%, 70%) url(../images/icon-work.svg) no-repeat 95% -10px;
 
 }
 
 .Play {
-    background: hsl(195, 74%, 62%) url(../images/icon-play.svg) no-repeat 222px -5px;
+    background: hsl(195, 74%, 62%) url(../images/icon-play.svg) no-repeat 95% -5px;
 
 }
 
 .Study {
-    background: hsl(348, 100%, 68%) url(../images/icon-study.svg) no-repeat 223px -5px;
+    background: hsl(348, 100%, 68%) url(../images/icon-study.svg) no-repeat 95% -5px;
 
 }
 
 .Exercise {
-    background: hsl(145, 58%, 55%) url(../images/icon-exercise.svg) no-repeat 220px -2px;
+    background: hsl(145, 58%, 55%) url(../images/icon-exercise.svg) no-repeat 95% -2px;
 
 }
 
 .Social {
-    background: hsl(264, 64%, 52%) url(../images/icon-social.svg) no-repeat 230px -18px;
+    background: hsl(264, 64%, 52%) url(../images/icon-social.svg) no-repeat 95% -18px;
 
 }
 
-.Self-care {
-    background: hsl(43, 84%, 65%) url(../images/icon-self-care.svg) no-repeat 233px -16px;
-
+.Self {
+    background: hsl(43, 84%, 65%) url(../images/icon-self-care.svg) no-repeat 95% -16px;
 }
 
-@media screen and (min-width: 500px) {
+.Care-title{
+    background: none;
+}
+
+@media screen and (min-width: 950px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
     .wrapper {
-        width: 1110px;
-        height: 506px;
+        width: 80vw;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -202,41 +207,41 @@ img {
         grid-template-areas:
             "user stats"
         ;
+        margin: 0;
     }
 
 
     .user {
-        height: 506px;
-        width: 255px;
         margin: 0;
         grid-area: user;
     }
 
     .user__profile {
-        height: 330px;
         display: block;
+        padding: 22px;
     }
 
     .user__profile img {
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
 
     .user__name {
-        font-size: 3rem;
+        font-size: 2rem;
+
     }
 
     .user__timeframe-division {
-        height: 150px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding: 20px;
     }
 
 
     .stats {
         display: grid;
-        grid-column-gap: 15px;
-        grid-row-gap: 15px;
+        grid-column-gap: 24px;
+        grid-row-gap: 26px;
         grid-template-areas:
             "work play study"
             "exercise social selfcare"
@@ -244,14 +249,17 @@ img {
     }
 
     .cont {
-        width: 255px;
-        height: 245px;
+        width: 15rem;
         margin: 0;
     }
 
     .cont__info {
-        height: 204px;
-        bottom: -40px;
+        padding: 15px 20px;
+
+    }
+
+    .stats__title {
+        margin: 0;
     }
 
     .Work {
@@ -284,7 +292,7 @@ img {
 
     }
 
-    .Self-care {
+    .Self{
         grid-area: selfcare;
         background-position: 160px -10px;
     }
@@ -293,18 +301,19 @@ img {
     .daily--active {
         display: block;
     }
-    
+
     .weekly--active {
         display: block;
     }
-        
+
     .monthly--active {
         display: block;
     }
+
     .recent {
-        font-size: 3rem;
+        font-size: 2rem;
         padding-top: 10px;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
     }
 
 
