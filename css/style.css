@@ -237,6 +237,10 @@ img {
         padding: 20px;
     }
 
+    .btn{
+        margin-bottom: .5rem;
+    }
+
 
     .stats {
         display: grid;
@@ -246,6 +250,10 @@ img {
             "work play study"
             "exercise social selfcare"
         ;
+    }
+
+    .stats__title-name{
+        margin-bottom: .5rem;
     }
 
     .cont {
@@ -313,7 +321,7 @@ img {
     .recent {
         font-size: 2rem;
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 1rem;
     }
 
 
