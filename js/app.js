@@ -17,7 +17,8 @@ function getHours() {
     let cards = '';
         myData.forEach((data) => {
           cards += `
-          <div class="cont ${data.title}">
+          <div class='card-container'>
+          <div class="cont ${data.title}"></div>
         <div class="cont__info stats__${data.title}">
    <div class="stats__title">
       <h2 class="stats__title-name ${data.title}-title">${data.title}</h2>
@@ -59,7 +60,7 @@ function getHours() {
      </div>
   </div>
  </div>
- </div>  
+ </div>
           `
           
         });

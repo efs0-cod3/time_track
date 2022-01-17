@@ -81,6 +81,8 @@ img {
     border-radius: 15px;
     cursor: pointer;
     overflow: hidden;
+    height: 80px;
+    transform: translateY(75px);
 }
 
 .cont__info {
@@ -185,7 +187,7 @@ img {
     background: hsl(43, 84%, 65%) url(../images/icon-self-care.svg) no-repeat 95% -16px;
 }
 
-.Care-title{
+.Care-title {
     background: none;
 }
 
@@ -237,7 +239,7 @@ img {
         padding: 20px;
     }
 
-    .btn{
+    .btn {
         margin-bottom: .5rem;
     }
 
@@ -252,17 +254,23 @@ img {
         ;
     }
 
-    .stats__title-name{
+    .stats__title-name {
         margin-bottom: .5rem;
     }
 
     .cont {
         width: 15rem;
         margin: 0;
+        height: 80px;
+        position:absolute;
+        transform: translateY(2px);
+
     }
 
     .cont__info {
         padding: 15px 20px;
+        width: 15rem;
+        z-index: 1;
 
     }
 
@@ -273,37 +281,40 @@ img {
     .Work {
         grid-area: work;
         background-position: 148px -10px;
+        
 
     }
 
     .Play {
         grid-area: play;
         background-position: 148px -10px;
-
+        
     }
-
     .Study {
         grid-area: study;
         background-position: 148px -10px;
-
     }
 
     .Exercise {
         grid-area: exercise;
         background-position: 147px -10px;
-
+        
     }
 
     .Social {
         grid-area: social;
         background-position: 156px -10px;
-
+        
     }
 
-    .Self{
+    .Self {
         grid-area: selfcare;
         background-position: 160px -10px;
+        z-index: 0;
+        
+
     }
+  
 
 
     .daily--active {
