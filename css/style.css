@@ -141,13 +141,11 @@ img {
 
 .monthly--active {
     display: flex;
-
 }
 
 .recent {
     font-size: 2rem;
     font-weight: 300;
-
 }
 
 .previous {
@@ -160,27 +158,22 @@ img {
 /* individual container */
 .Work {
     background: hsl(15, 100%, 70%) url(../images/icon-work.svg) no-repeat 95% -10px;
-
 }
 
 .Play {
     background: hsl(195, 74%, 62%) url(../images/icon-play.svg) no-repeat 95% -5px;
-
 }
 
 .Study {
     background: hsl(348, 100%, 68%) url(../images/icon-study.svg) no-repeat 95% -5px;
-
 }
 
 .Exercise {
     background: hsl(145, 58%, 55%) url(../images/icon-exercise.svg) no-repeat 95% -2px;
-
 }
 
 .Social {
     background: hsl(264, 64%, 52%) url(../images/icon-social.svg) no-repeat 95% -18px;
-
 }
 
 .Self {
@@ -262,7 +255,7 @@ img {
         width: 15rem;
         margin: 0;
         height: 80px;
-        position:absolute;
+        position: absolute;
         transform: translateY(2px);
 
     }
@@ -271,7 +264,6 @@ img {
         padding: 15px 20px;
         width: 15rem;
         z-index: 1;
-
     }
 
     .stats__title {
@@ -281,15 +273,13 @@ img {
     .Work {
         grid-area: work;
         background-position: 148px -10px;
-        
-
     }
 
     .Play {
         grid-area: play;
         background-position: 148px -10px;
-        
     }
+
     .Study {
         grid-area: study;
         background-position: 148px -10px;
@@ -298,24 +288,18 @@ img {
     .Exercise {
         grid-area: exercise;
         background-position: 147px -10px;
-        
     }
 
     .Social {
         grid-area: social;
         background-position: 156px -10px;
-        
     }
 
     .Self {
         grid-area: selfcare;
         background-position: 160px -10px;
         z-index: 0;
-        
-
     }
-  
-
 
     .daily--active {
         display: block;
@@ -334,6 +318,4 @@ img {
         padding-top: 10px;
         padding-bottom: 1rem;
     }
-
-
 }
